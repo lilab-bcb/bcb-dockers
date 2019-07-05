@@ -23,6 +23,6 @@ RUN pip install --upgrade pip && \
     pip install --upgrade torchvision
 
 # Add NVIDIA's ResNet-50 v1.5
-ADD ResNet-50_v1.5.zip /workspace/ResNet-50
+ADD ResNet-50.tar.gz /workspace
 
 	
