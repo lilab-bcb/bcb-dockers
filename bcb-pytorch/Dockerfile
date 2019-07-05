@@ -22,6 +22,11 @@ RUN pip install --upgrade pip && \
     pip install openslide-python && \
     pip install --upgrade torchvision
 
+# Install APEX with CUDA and C++ extension
+RUN git clone https://github.com/NVIDIA/apex /opt/apex && \
+	cd /opt/apex && \
+	pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+
 # Add NVIDIA's ResNet-50 v1.5
 ADD ResNet-50.tar.gz /workspace
 
