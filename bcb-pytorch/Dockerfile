@@ -19,8 +19,8 @@ RUN pip install --upgrade pip && \
     pip install seaborn && \
     pip install scikit-image && \
     pip install ipywidgets && \
-    pip install openslide-python && \
-    pip install --upgrade torchvision
+    pip install openslide-python
+    #pip install torchvision>=0.3.0
 
 # Install APEX with CUDA and C++ extension
 RUN git clone https://github.com/NVIDIA/apex /opt/apex && \
