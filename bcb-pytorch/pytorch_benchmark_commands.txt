@@ -1,0 +1,5 @@
+nvidia-smi dmon -s pucvt -o DT -d 10 -f nvidia-smi.dmon$1.$(date "+%Y.%m.%d-%H.%M.%S").csv &
+
+nvidia-docker run -it --shm-size 16G --rm -v /raid:/data --ulimit memlock=-1 --ulimit stack=67108864 nvcr.io/nvidia/pytorch:19.06-py3
+
+time python multiproc.py --nproc_per_node 4 main.py -j5 -p 500 --arch resnet50 -c fanin --label-smoothing 0.1 -b 256 --lr 0.4 --warmup 5 --epochs 10 --fp16 --static-loss-scale 256 /data/imagenet

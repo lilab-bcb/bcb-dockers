@@ -9,18 +9,18 @@
 FROM nvcr.io/nvidia/pytorch:19.06-py3
 
 # Install openslide
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends openslide-tools && \
-    rm -rf /var/lib/apt/lists/
+#RUN apt-get update && \
+#    apt-get install -y --no-install-recommends openslide-tools && \
+#    rm -rf /var/lib/apt/lists/
 
 # Install some python packages via pip
-RUN pip install --upgrade pip && \
-    pip install pillow && \
-    pip install seaborn && \
-    pip install scikit-image && \
-    pip install ipywidgets && \
-    pip install openslide-python
-    #pip install torchvision>=0.3.0
+#RUN pip install --upgrade pip && \
+#    pip install pillow && \
+#    pip install seaborn && \
+#    pip install scikit-image && \
+#    pip install ipywidgets && \
+#    pip install openslide-python
+#    #pip install torchvision>=0.3.0
 
 # Install APEX with CUDA and C++ extension
 #RUN git clone https://github.com/NVIDIA/apex /opt/apex && \
