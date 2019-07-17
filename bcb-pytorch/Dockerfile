@@ -9,9 +9,9 @@
 FROM nvcr.io/nvidia/pytorch:19.06-py3
 
 # Install openslide
-#RUN apt-get update && \
-#    apt-get install -y --no-install-recommends openslide-tools && \
-#    rm -rf /var/lib/apt/lists/
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends openslide-tools && \
+    rm -rf /var/lib/apt/lists/
 
 # Install some python packages via pip
 #RUN pip install --upgrade pip && \
