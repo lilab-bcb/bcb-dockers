@@ -14,8 +14,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/
 
 # Install some python packages via pip
-RUN pip install --upgrade pip
-#    pip install pillow && \
+RUN pip install --upgrade pip && \
+    pip install pillow
 #    pip install seaborn && \
 #    pip install scikit-image && \
 #    pip install ipywidgets && \
