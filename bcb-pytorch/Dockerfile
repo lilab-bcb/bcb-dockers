@@ -15,11 +15,11 @@ RUN apt-get update && \
 
 # Install some python packages via pip
 RUN pip install --upgrade pip && \
-    pip install pillow
-#    pip install seaborn && \
-#    pip install scikit-image && \
-#    pip install ipywidgets && \
-#    pip install openslide-python
+    pip install seaborn && \
+    pip install scikit-image && \
+    pip install ipywidgets && \
+    pip install openslide-python
+#    #pip install pillow
 #    #pip install torchvision>=0.3.0
 
 # Install APEX with CUDA and C++ extension
