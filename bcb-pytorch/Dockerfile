@@ -16,9 +16,9 @@ RUN apt-get update && \
 # Install some python packages via pip
 RUN pip install --upgrade pip && \
     pip install seaborn && \
-    pip install scikit-image && \
-    pip install ipywidgets && \
-    pip install openslide-python
+    pip install scikit-image
+#    pip install ipywidgets && \
+#    pip install openslide-python
 #    #pip install pillow
 #    #pip install torchvision>=0.3.0
 
