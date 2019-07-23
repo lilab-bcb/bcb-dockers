@@ -17,9 +17,10 @@ RUN apt-get update && \
 RUN pip install --upgrade pip && \
     pip install seaborn && \
     pip install ipywidgets && \
-    pip install openslide-python
-#    pip install scikit-image && \
-#    pip uninstall -y pillow
+    pip install openslide-python && \
+    pip install scikit-image && \
+    pip uninstall -y pillow && \
+    pip install --force-reinstall Pillow-SIMD
 
 
 # Install APEX with CUDA and C++ extension
