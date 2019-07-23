@@ -17,10 +17,10 @@ RUN apt-get update && \
 RUN pip install --upgrade pip && \
     pip install seaborn && \
     pip install ipywidgets && \
-    pip install openslide-python && \
-    pip install scikit-image && \
-    pip uninstall -y pillow && \
-    pip install Pillow-SIMD
+    pip install openslide-python
+#    pip install scikit-image && \
+#    pip uninstall -y pillow
+
 
 # Install APEX with CUDA and C++ extension
 #RUN git clone https://github.com/NVIDIA/apex /opt/apex && \
