@@ -16,11 +16,11 @@ RUN apt-get update && \
 # Install some python packages via pip
 RUN pip install --upgrade pip && \
     pip install seaborn && \
-    pip install ipywidgets
-#    pip install openslide-python
-#    pip install scikit-image
-#    pip install pillow
-#    pip install torchvision>=0.3.0
+    pip install ipywidgets && \
+    pip install openslide-python && \
+    pip install scikit-image && \
+    pip uninstall pillow && \
+    pip install Pillow-SIMD
 
 # Install APEX with CUDA and C++ extension
 #RUN git clone https://github.com/NVIDIA/apex /opt/apex && \
