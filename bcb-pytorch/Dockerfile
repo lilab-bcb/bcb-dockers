@@ -19,7 +19,7 @@ RUN pip install --upgrade pip && \
     pip install ipywidgets && \
     pip install openslide-python && \
     pip install scikit-image && \
-    pip uninstall pillow && \
+    pip uninstall -y pillow && \
     pip install Pillow-SIMD
 
 # Install APEX with CUDA and C++ extension
