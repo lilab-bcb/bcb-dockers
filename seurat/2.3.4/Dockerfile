@@ -1,4 +1,4 @@
-FROM r-base:3.5.3
+FROM r-base:3.6.2
 
 # Install ssl, curl, ssh, and git
 RUN apt-get update -qq && \
