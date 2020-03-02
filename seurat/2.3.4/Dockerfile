@@ -15,7 +15,6 @@ RUN apt-get update -qq && \
 	apt-get clean
 
 ## INSTALL SEURAT 2.3.4 ##
-ADD archived_seurat.R /software/archived_seurat.R
 ADD install.R /software/install.R
 RUN Rscript /software/install.R
 
